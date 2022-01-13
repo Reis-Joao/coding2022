@@ -1,5 +1,6 @@
 # coding2022
-This is just a regular text file.
+
+This is just a regular text file :D
 
 This is in **Markdown**. It can also do lists:
 - bullet items
@@ -7,3 +8,7 @@ This is in **Markdown**. It can also do lists:
 
 1. numbered items
 2. like this
+
+Hey, Malik was here. And left
+
+`a scary code here`
