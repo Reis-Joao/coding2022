@@ -12,3 +12,5 @@ This is in **Markdown**. It can also do lists:
 Hey, Malik was here. And left
 
 `a scary code here`
+
+Not scared.
