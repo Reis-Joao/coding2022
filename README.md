@@ -1,5 +1,5 @@
 # coding2022
-This is just a regular text file!
+This is just a regular text file.
 
 This is in **Markdown**. It can also do lists:
 - bullet items
