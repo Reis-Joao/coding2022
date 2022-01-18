@@ -1,0 +1,29 @@
+from ast import Return
+
+
+date = "2022-01-17"
+
+def compute_tomorrow(date):
+    year = date[0:4]
+    month = date[5:7]
+    day = int(date[-2:])
+    return year + " " + month + " " + str(day + 1)
+   
+print("Next class is on",compute_tomorrow(date))
+
+def add_two(number):
+    return(number + 2)
+
+print("10 plus 2 is",add_two(10))
+
+def greet():
+    print("Hello World!")
+    print("Second Line")
+
+greet()
+
+def feet_to_meters(number):
+    return(number * 0.3048)
+
+print("30 feet equals", feet_to_meters(30),"meters")
+
