@@ -1,11 +1,6 @@
+USER_PROMPT = "Guess the world: "
+
 def score_letter(letter, position, true_word):
-    # for example, score_letter("A", 0, "ABBA") should be correct position~
-    # ex: >>> score_letter("A", 0, "ABBA")
-    #'* Good Job!'
-    # score_letter("B", 0, "ABBA")
-    #'o Almost there!'
-    # score_letter("C", 0, "ABBA")
-    # '- Try Again :('
     if (true_word[position]==letter): 
         return "*" #for correct position
     if (letter in true_word):
@@ -27,13 +22,24 @@ def score_word(guess, true_word):
     return score
 
 def get_and_score_guess(true_word):
-    guess = input("Guess the word: ")
-    print(score_word(guess, true_word))
+    guess = input(USER_PROMPT)
+    score= score_word(guess, true_word)
+    print(len(USER_PROMPT) * " " + score)
+    return score
+
+def loop_until_sucess(true_word):
+    correct_guess = False
+    while not correct_guess:
+        score = get_and_score_guess(true_word)
+        if score == 6 * "*":
+            correct_guess = True
 
 
 message = score_word("APPB","ABBA")
 print(message)
 
-get_and_score_guess("across")
+loop_until_sucess("across")
+
+
 
 
