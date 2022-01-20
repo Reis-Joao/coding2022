@@ -1,3 +1,5 @@
+from random import choice
+
 USER_PROMPT = "Guess the world: "
 
 def score_letter(letter, position, true_word):
@@ -6,11 +8,9 @@ def score_letter(letter, position, true_word):
     if (letter in true_word):
         return "o" #for correct letter, incorrect position
     else:
-        return "-"
+        return "-" #for wrong letter
 
 def score_word(guess, true_word):
-    # score_word("APPL", "ABBA")
-    # "*---"
     if len(guess) != len(true_word):
         return "THE TWO WORDS ARE NOT THE SAME LENGHT"
 
@@ -34,11 +34,13 @@ def loop_until_sucess(true_word):
         if score == 6 * "*":
             correct_guess = True
 
+def get_random_word(filename):
+    word_file = open(filename, "r") # "r" stands for read
+    words = word_file.readlines()
+    return choice(words)
 
-message = score_word("APPB","ABBA")
-print(message)
-
-loop_until_sucess("across")
+word = get_random_word("data/words")[0:6]
+loop_until_sucess(word)
 
 
 
